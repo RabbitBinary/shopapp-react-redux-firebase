@@ -43,7 +43,9 @@ module.exports = {
         headingColor: "#2e2e2e",
         textColor: "#515151",
         cartNumBg: "#e80013",
-        primary: "f5f3f3",
+        primary: "#f5f3f3",
+        cardOverlay : 'rgba(256,256,256,0.4)',
+        lightTextGray: "#9ca0ab"
       },
       screens: {
         sm: "640px",
