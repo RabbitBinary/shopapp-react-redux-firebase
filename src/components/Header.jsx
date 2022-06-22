@@ -86,18 +86,20 @@ const Header = () => {
               alt="userprofile"
               onClick={login}
             />
-            {
-              isMenu && (
+            {isMenu && (
                 <motion.div
                   initial={{opacity: 0, scale: 0.6}}
                   animate={{opacity: 1, scale: 1}}
                   exit={{opacity: 0, scale: 0.6}}
                   className="w-40 bg-gray-50 shadow-xl rounded-lg flex flex-col absolute top-12 right-0">
-                  {
-                    user && user.email === "vladimir.labat@gmail.com" && (
+
+                  {user && user.email === "vladimir.labat@gmail.com" && (
                       <Link to={"/createItem"}>
                         <p className="px-4 py-2 flex items-center gap-3 cursor-pointer hover:bg-slate-200 transition-all
-                        duration-100 ease-in-out text-textColor text-base">New Item <MdAdd/>
+                        duration-100 ease-in-out text-textColor text-base"
+                           onClick={() => setIsMenu(false)}
+                        >
+                          New Item <MdAdd/>
                         </p>
                       </Link>
                     )}
@@ -153,16 +155,16 @@ const Header = () => {
                 <ul
                   className="flex flex-col">
                   <li className="text-base text-textColor cursor-pointer hover:text-headingColor
-                    duration-100 transition-all ease-in-out hover:bg-slate-200 px-4 py-2">Home
+                    duration-100 transition-all ease-in-out hover:bg-slate-200 px-4 py-2" onClick={() => setIsMenu(false)}>Home
                   </li>
                   <li className="text-base text-textColor cursor-pointer hover:text-headingColor
-                    duration-100 transition-all ease-in-out hover:bg-slate-200 px-4 py-2">Menu
+                    duration-100 transition-all ease-in-out hover:bg-slate-200 px-4 py-2" onClick={() => setIsMenu(false)}>Menu
                   </li>
                   <li className="text-base text-textColor cursor-pointer hover:text-headingColor
-                    duration-100 transition-all ease-in-out hover:bg-slate-200 px-4 py-2">About Us
+                    duration-100 transition-all ease-in-out hover:bg-slate-200 px-4 py-2" onClick={() => setIsMenu(false)}>About Us
                   </li>
                   <li className="text-base text-textColor cursor-pointer hover:text-headingColor
-                    duration-100 transition-all ease-in-out hover:bg-slate-200 px-4 py-2">Service
+                    duration-100 transition-all ease-in-out hover:bg-slate-200 px-4 py-2" onClick={() => setIsMenu(false)}>Service
                   </li>
                 </ul>
                 <p className="m-2 p-2 flex items-center justify-center gap-3 cursor-pointer bg-gray-200 hover:bg-slate-300 transition-all
